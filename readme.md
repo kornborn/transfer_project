@@ -4,7 +4,7 @@
 
 2) `docker-compose up -d --build`
 
-3) `cp .env_example .env`
+3) `cp .env.example .env`
 
 4) `docker-compose exec app php artisan key:generate`
 
@@ -16,3 +16,6 @@
 
 `docker-compose exec app php artisan migrate --seed`\
 `docker-compose exec app php artisan make:controller MyController`
+
+`npm i -f`
+

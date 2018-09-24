@@ -15,4 +15,12 @@ Route::get('/', function () {
     return view('main');
 });
 
-Route::post('/transfer/submit', 'TransferController@makeTransfer');
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/transfer', function () {
+    return view('transfer');
+});
+
+Route::post('/transfer/submit', 'TransfersController@makeTransfer');
