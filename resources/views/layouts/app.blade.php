@@ -5,21 +5,12 @@
         <title>Main</title>
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
-        {{--<link href="{{ asset('css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" media="screen">--}}
-        {{--<link href="{{ asset('css/bootstrap-combined.min.css') }}" rel="stylesheet">--}}
 
-        {{--<script type="text/javascript"--}}
-                {{--src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">--}}
-        {{--</script>--}}
-        {{--<script type="text/javascript"--}}
-                {{--src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">--}}
-        {{--</script>--}}
-        {{--<script type="text/javascript"--}}
-                {{--src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">--}}
-        {{--</script>--}}
-        {{--<script type="text/javascript"--}}
-                {{--src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">--}}
-        {{--</script>--}}
+        <script src="{{ 'js/jquery.js' }}"></script>
+
+        {{--Date time picker--}}
+        <link href="{{ asset('datetimepicker/jquery.datetimepicker.css') }}" rel="stylesheet" type="text/css" >
+        <script src="{{ 'datetimepicker/jquery.datetimepicker.full.js' }}"></script>
 
     </head>
     <body>

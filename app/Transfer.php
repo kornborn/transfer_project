@@ -16,6 +16,5 @@ class Transfer extends Model
         'receiver_id',
         'date',
         'money',
-        'status',
     ];
 }

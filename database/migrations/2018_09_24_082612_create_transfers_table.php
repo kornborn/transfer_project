@@ -17,9 +17,8 @@ class CreateTransfersTable extends Migration
             $table->increments('id');
             $table->integer('giving_id');
             $table->integer('receiver_id');
-            $table->date('date');
+            $table->timestamp('date');
             $table->integer('money');
-//            $table->string('status');
             $table->timestamps();
         });
     }

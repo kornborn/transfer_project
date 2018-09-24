@@ -14,6 +14,7 @@
 
 Сайт доступен на http://localhost:8080/
 
+`docker-compose exec app php artisan migrate:reset`\
 `docker-compose exec app php artisan migrate --seed`\
 `docker-compose exec app php artisan make:controller MyController`
 
