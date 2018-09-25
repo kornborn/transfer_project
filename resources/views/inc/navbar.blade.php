@@ -10,9 +10,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/transfer">Transfer</a></li>
-                <li><a href="/">List</a></li>
-                <li><a href="/about">About</a></li>
+                <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="/">Users</a></li>
+                <li class="{{ Request::is('transactions') ? 'active' : '' }}"><a href="/transactions">Transactions</a></li>
+                <li class="{{ Request::is('create_transaction') ? 'active' : '' }}"><a href="/create_transaction">Create transaction</a></li>
             </ul>
         </div>
     </div>

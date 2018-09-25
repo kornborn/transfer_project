@@ -7,6 +7,15 @@
         @endforeach
     </div>
 @endif
+
+@if (session('fail'))
+    <div class="col-lg-4">
+        <div class="alert alert-danger">
+            {{ session('fail') }}
+        </div>
+    </div>
+@endif
+
 @if (session('status'))
     <div class="col-lg-4">
         <div class="alert alert-success">

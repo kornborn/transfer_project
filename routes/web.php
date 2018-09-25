@@ -11,16 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
+Route::get('/', 'UserController@getUsers');
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/transactions', 'TransactionController@getTransactions');
 
-Route::get('/transfer', function () {
-    return view('transfer');
-});
+Route::get('/create_transaction', 'PagesController@getCreateTransaction');
 
-Route::post('/transfer/submit', 'TransfersController@makeTransfer');
+Route::post('/transaction/submit', 'TransactionController@createTransaction');
+
+Route::post('/user/add', 'UserController@addUser');

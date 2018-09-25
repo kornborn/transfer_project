@@ -6,7 +6,7 @@
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
 
-        <script src="{{ 'js/jquery.js' }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
 
         {{--Date time picker--}}
         <link href="{{ asset('datetimepicker/jquery.datetimepicker.css') }}" rel="stylesheet" type="text/css" >
