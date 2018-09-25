@@ -19,7 +19,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('receiver_id');
             $table->timestamp('date');
             $table->integer('money');
-            $table->string('status');
+            $table->string('status')->default('opened');
             $table->timestamps();
         });
     }

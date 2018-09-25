@@ -11,6 +11,7 @@
                     <th scope="col">Id кому перевод</th>
                     <th scope="col">Дата перевода</th>
                     <th scope="col">Сумма перевода</th>
+                    <th scope="col">Статус</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -22,6 +23,7 @@
                         <td>{{ $transaction->receiver_id }}</td>
                         <td>{{ $transaction->date }}</td>
                         <td>{{ $transaction->money }}</td>
+                        <td>{{ $transaction->status }}</td>
                     </tr>
                 @endforeach
                 </tbody>

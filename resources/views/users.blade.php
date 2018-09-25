@@ -40,7 +40,7 @@
         </div>
 
         <div>
-            {{Form::submit('Add', ['class' => 'btn btn-primary'])}}
+            {{Form::submit('Add user', ['class' => 'btn btn-primary'])}}
         </div>
 
         {!! Form::close() !!}

@@ -1,6 +1,6 @@
 
 
-1) `docker run --rm -v $(pwd):/app composer/composer install`
+1) `docker run --rm -v $(pwd):/app composer install`
 
 2) `docker-compose up -d --build`
 

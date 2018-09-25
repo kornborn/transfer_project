@@ -11,6 +11,14 @@ RUN apt-get update && apt-get install -y libmcrypt-dev \
     && pecl install imagick \
     && docker-php-ext-enable imagick \
     && docker-php-ext-install mcrypt pdo_mysql
+#    && apt-get install -y cron\
+#    && touch /var/log/cron.log
+#    && crontab /etc/cron.d/hello-cron\
+#    && chmod 0644 /etc/cron.d/hello-cron\
+#    && touch /var/log/cron.log
 
 WORKDIR /var/www/app
 CMD ["php-fpm"]
+
+# Run the command on container startup
+#CMD cron && tail -f /var/log/cron.log

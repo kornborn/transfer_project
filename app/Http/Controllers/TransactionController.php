@@ -9,7 +9,13 @@ use App\Transaction;
 
 class TransactionController extends Controller
 {
-    //Валидация введенных параметров
+    /**
+     * Валидация введенных параметров
+     *
+     * @param  array|string|\Closure  $middleware
+     * @param  array   $options
+     * @return \Illuminate\Routing\ControllerMiddlewareOptions
+     */
     protected function validateTransaction(int $givingId, int $receiverId, int $sum)
     {
         if ($givingId == $receiverId) {
@@ -24,7 +30,7 @@ class TransactionController extends Controller
         }
 
         if ($givingUser->money < $sum) {
-            throw new \Exception('У дающего пользователя недостаточно денег для этой транзакции. Его баланс: ' . $givingUser->money);
+            throw new \Exception('У передающего пользователя недостаточно денег для этой транзакции. Его баланс: ' . $givingUser->money);
         }
         return;
     }
@@ -66,12 +72,13 @@ class TransactionController extends Controller
     }
 
     //Выполнение транзакций
-    public function submitTransactions()
+    public static function submitTransactions()
     {
         $transactions = Transaction::all();
 
         foreach ($transactions as $transaction) {
             if ($transaction->date >= Carbon::now()->format('Y-m-d H:i:s')) {
+
                 $receiverId = $transaction->receiver_id;
                 $transactionSum = $transaction->money;
 
@@ -79,7 +86,10 @@ class TransactionController extends Controller
 
                 $receiverUser->money += $transactionSum;
 
-//                $transaction->
+                $transaction->status = 'closed';
+
+                $receiverUser->save();
+                $transaction->save();
             }
         }
         return;
