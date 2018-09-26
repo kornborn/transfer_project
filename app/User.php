@@ -18,7 +18,11 @@ class User extends Model
         'money',
     ];
 
-    //Получить последнюю транзакцию
+    /**
+     * Возвращает последнюю транзакцию
+     *
+     * @return \Illuminate\Database\Eloquent\Model
+     */
     public function getLastTransaction()
     {
         return static::select(\DB::raw('*'))

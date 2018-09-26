@@ -2,7 +2,6 @@
 
 namespace App\Console;
 
-use App\Http\Controllers\TransactionController;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -20,13 +19,15 @@ class Kernel extends ConsoleKernel
     /**
      * Define the application's command schedule.
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @param \Illuminate\Console\Scheduling\Schedule $schedule
+     *
      * @return void
      */
     protected function schedule(Schedule $schedule)
     {
-         $schedule->call(TransactionController::submitTransactions())
-                  ->hourly();
+         $schedule
+             ->call('App\Http\Controllers\TransactionController@submitTransactions')
+             ->everyMinute();
     }
 
     /**
