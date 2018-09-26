@@ -50,6 +50,16 @@
     ```bash
         docker-compose exec app php artisan migrate --seed
     ```
+9. Для выполнения отложенных переводом используется cron. Перевод осуществляется по системному
+    времени контейнера transfer_app_1. Чтобы включить переводы необходимо:
+    * выполнить bash команду `crontab -e`
+    * добавить в конец файла `* * * * * docker exec final_project_app_1 php artisan schedule:run >> /dev/null 2>&1`
+    * сохранить и выйти
     
 После этого сайт будет доступен (по умолчанию порт 8080) на http://localhost:8080/
-
+    
+##Тесты
+Для запуска тестов в корне проекта необходимо ввести следующую команду:
+    ```bash
+        docker exec -it test_app_1 ./vendor/bin/phpunit
+    ```
