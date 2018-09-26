@@ -25,7 +25,7 @@
         cd transfer_project \
         && docker run --rm -v $(pwd):/app composer install
     ```
-3. Настройить порты в docker-compose.yml. Поднять докер контейнеры:
+3. Настроить порты в docker-compose.yml. Поднять докер контейнеры:
     ```bash
         docker-compose up -d --build
     ```
