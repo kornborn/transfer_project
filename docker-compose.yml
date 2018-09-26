@@ -37,5 +37,11 @@ services:
     ports:
         - 33061:3306
 
+  # nodejs
+  nodejs:
+    image: wiwatsrt/docker-laravel-nodejs
+    volumes:
+        - ./:/var/www
+
 volumes:
   dbdata:

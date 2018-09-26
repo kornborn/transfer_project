@@ -10,15 +10,7 @@ RUN apt-get update && apt-get install -y libmcrypt-dev \
     mysql-client libmagickwand-dev --no-install-recommends \
     && pecl install imagick \
     && docker-php-ext-enable imagick \
-    && docker-php-ext-install mcrypt pdo_mysql
-#    && apt-get install -y cron\
-#    && touch /var/log/cron.log
-#    && crontab /etc/cron.d/hello-cron\
-#    && chmod 0644 /etc/cron.d/hello-cron\
-#    && touch /var/log/cron.log
+    && docker-php-ext-install mcrypt pdo_mysql \
 
 WORKDIR /var/www/app
 CMD ["php-fpm"]
-
-# Run the command on container startup
-#CMD cron && tail -f /var/log/cron.log
