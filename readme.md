@@ -13,6 +13,7 @@
 ## Требования
 * docker
 * docker-compose
+* npm
 
 ## Процесс установки
 1. Перейти в нужную папку и склонировать проект:
@@ -33,9 +34,11 @@
         cp .env.example .env
     ```
     и настроить .env
-5. Дать доступ к папке vendor:
+5. Дать доступ к папке vendor, bootstrap, storage:
     ```bash
         chmod -R 777 vendor/
+        chmod -R 777 bootstrap/
+        chmod -R 777 storage/
     ```
 6. Подготовить artisan
     ```bash
@@ -44,7 +47,7 @@
     ```
 7. Собрать стили, скрипты:
    ```bash
-       docker-compose run --rm nodejs npm install
+       npm install
    ```
 8. Заполнить БД тестовыми данными:
     ```bash
@@ -62,5 +65,5 @@
 
 Для запуска тестов в корне проекта необходимо ввести следующую команду:
     ```bash
-        docker exec -it test_app_1 ./vendor/bin/phpunit
+        docker exec -it transfer_project_app_1 ./vendor/bin/phpunit
     ```
