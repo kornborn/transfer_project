@@ -64,6 +64,5 @@
 ## Тесты
 
 Для запуска тестов в корне проекта необходимо ввести следующую команду:
-    ```bash
-        docker exec -it transfer_project_app_1 ./vendor/bin/phpunit
-    ```
+
+    docker-compose exec app php artisan migrate --seed
