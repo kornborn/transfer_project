@@ -36,7 +36,7 @@
     и настроить .env
 5. Дать доступ к папкам vendor, bootstrap, storage:
     ```bash
-        chmod -R 777 vendor/ \
+        sudo chmod -R 777 vendor/ \
         && chmod -R 777 bootstrap/ \
         && chmod -R 777 storage/ \
     ```
