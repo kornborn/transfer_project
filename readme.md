@@ -25,7 +25,7 @@
         cd transfer_project \
         && docker run --rm -v $(pwd):/app composer install
     ```
-3. Поднять докер контейнеры:
+3. Настройить порты в docker-compose.yml. Поднять докер контейнеры:
     ```bash
         docker-compose up -d --build
     ```
@@ -34,11 +34,11 @@
         cp .env.example .env
     ```
     и настроить .env
-5. Дать доступ к папке vendor, bootstrap, storage:
+5. Дать доступ к папкам vendor, bootstrap, storage:
     ```bash
-        chmod -R 777 vendor/
-        chmod -R 777 bootstrap/
-        chmod -R 777 storage/
+        chmod -R 777 vendor/ \
+        && chmod -R 777 bootstrap/ \
+        && chmod -R 777 storage/ \
     ```
 6. Подготовить artisan
     ```bash
