@@ -38,7 +38,7 @@
     ```bash
         sudo chmod -R 777 vendor/ \
         && chmod -R 777 bootstrap/ \
-        && chmod -R 777 storage/ \
+        && chmod -R 777 storage/
     ```
 6. Подготовить artisan
     ```bash
