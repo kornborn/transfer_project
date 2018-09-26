@@ -37,8 +37,8 @@
 5. Дать доступ к папкам vendor, bootstrap, storage:
     ```bash
         sudo chmod -R 777 vendor/ \
-        && chmod -R 777 bootstrap/ \
-        && chmod -R 777 storage/
+        && sudo chmod -R 777 bootstrap/ \
+        && sudo chmod -R 777 storage/
     ```
 6. Подготовить artisan
     ```bash
