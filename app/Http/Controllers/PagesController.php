@@ -15,4 +15,14 @@ class PagesController extends Controller
     {
         return view('create_transaction');
     }
+
+    /**
+     * Возвращает view с React
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function getReact()
+    {
+        return view('react');
+    }
 }

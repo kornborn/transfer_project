@@ -11,12 +11,20 @@
 |
 */
 
-Route::get('/', 'UserController@getUsers');
+//Route::get('phpinfo', function () {
+//    return phpinfo();
+//});
 
-Route::get('/transactions', 'TransactionController@getTransactions');
+Route::view('{path?}', 'welcome');
 
-Route::get('/create_transaction', 'PagesController@getCreateTransaction');
-
-Route::post('/transaction/submit', 'TransactionController@createTransaction');
-
-Route::post('/user/add', 'UserController@addUser');
+//Route::get('/', 'UserController@getUsers');
+//
+//Route::get('/transactions', 'TransactionController@getTransactions');
+//
+//Route::get('/create_transaction', 'PagesController@getCreateTransaction');
+//
+//Route::get('/react', 'PagesController@getReact');
+//
+//Route::post('/transaction/submit', 'TransactionController@createTransaction');
+//
+//Route::post('/user/add', 'UserController@addUser');

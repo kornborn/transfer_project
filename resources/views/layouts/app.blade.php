@@ -8,6 +8,8 @@
 
         <script src="{{ asset('js/app.js') }}"></script>
 
+        {{--<script src="{{ asset('js/react/app.js') }}"></script>--}}
+
         {{--Date time picker--}}
         <link href="{{ asset('datetimepicker/jquery.datetimepicker.css') }}" rel="stylesheet" type="text/css" >
         <script src="{{ 'datetimepicker/jquery.datetimepicker.full.js' }}"></script>

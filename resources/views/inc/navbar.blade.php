@@ -13,6 +13,7 @@
                 <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="/">Users</a></li>
                 <li class="{{ Request::is('transactions') ? 'active' : '' }}"><a href="/transactions">Transactions</a></li>
                 <li class="{{ Request::is('create_transaction') ? 'active' : '' }}"><a href="/create_transaction">Create transaction</a></li>
+                <li class="{{ Request::is('react') ? 'active' : '' }}"><a href="/react">React</a></li>
             </ul>
         </div>
     </div>
